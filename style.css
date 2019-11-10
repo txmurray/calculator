@@ -1,0 +1,139 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+  
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background-color: #1F2332;
+}
+
+.grid {
+	padding: 20px;
+	height: 100%;
+	display: grid;
+	grid-gap: 10px 10px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas:
+	"clear clear delete divide"
+	"seven eight nine multiply"
+	"four five six subtract"
+	"one two three add"
+	"zero zero zero equals";
+}
+
+.display {
+	height: 100px;
+	margin: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #191b25;
+	border-radius: 5px;
+	box-shadow: inset 0 0 20px rgba(0,0,0,.2);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 60px;
+	font-family: DIN, sans-serif;
+	color: #FFFFFF;
+	text-align: right;
+}
+
+.clear {
+	grid-area: clear;
+}
+
+.delete {
+	grid-area: delete;
+}
+
+.digit--9 {
+	grid-area: nine;
+}
+
+.digit--8 {
+	grid-area: eight;
+}
+
+.digit--7 {
+	grid-area: seven;
+}
+
+.digit--6 {
+	grid-area: six;
+}
+
+.digit--5 {
+	grid-area: five;
+}
+
+.digit--4 {
+	grid-area: four;
+}
+
+.digit--3 {
+	grid-area: three;
+}
+
+.digit--2 {
+	grid-area: two;
+}
+
+.digit--1 {
+	grid-area: one;
+}
+
+.digit--0 {
+	grid-area: zero;
+}
+
+.divide {
+	grid-area: divide;
+}
+
+.multiply {
+	grid-area: multiply;
+}
+
+.subtract {
+	grid-area: subtract;
+}
+
+.add {
+	grid-area: add;
+}
+
+.equals {
+	grid-area: equals;
+}
+
+.btn {
+	background-color: #3e435b;
+	border: none;
+	border-radius: 5px;
+	font-size: 44px;
+	font-family: DIN, sans-serif;
+	color: #FFFFFF;
+	opacity: .8;
+	padding-bottom: 8px;
+	transition: 100ms;
+	cursor: pointer;
+}
+
+.btn:hover {
+	filter: brightness(115%);
+}
+
+.btn:active {
+	filter: brightness(130%);
+}
+
+.btn--operator {
+	background-image: linear-gradient(45deg, #3a3897, #a3a1ff);
+	font-size: 60px;
+}
